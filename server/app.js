@@ -4,11 +4,31 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var util = require('util');
+var Twitter = require('node-twitter');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
+
+// var twitterRestClient = new Twitter.RestClient(
+//     'o7vPlD0BBhqi6uz9lEgcuzVd2',
+//     'PqzCq30D3M9KAzIYocCLGOybk9VqDRxhAvsiAKVDp9aj0zUcX0',
+//     '155258553-mljzzG0HpsqxZSNr1X0dADsOtLc8nX7OOhdeVjMI',
+//     'r8HC9TsbYFynt5Ow2NIYMYvQD0JLO4cW6r7gkT5qdzcTs'
+// );
+
+// twitterRestClient.statusesHomeTimeline({}, function(error, result) {
+//     if (error)
+//     {
+//         console.log('Error: ' + (error.code ? error.code + ' ' + error.message : error.message));
+//     }
+//     if (result)
+//     {
+//         console.log(result);
+//     }
+// });
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(__dirname + '/public/favicon.ico'));

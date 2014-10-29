@@ -1,5 +1,5 @@
 'use strict';
-
+var app = angular.module('CFBTweet');
 /**
  * @ngdoc function
  * @name clientApp.controller:MainCtrl
@@ -7,11 +7,12 @@
  * # MainCtrl
  * Controller of the clientApp
  */
-angular.module('CFBTweet')
-  .controller('MainCtrl', function ($scope) {
+app.controller('MainCtrl', function ($scope) {
+    
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-  });
+
+});
